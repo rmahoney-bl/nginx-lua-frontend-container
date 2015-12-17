@@ -1,3 +1,2 @@
-frontend.sock
-backend.sock
-nohup.out
+tmp/frontend.sock
+tmp/backend.sock
