@@ -1,2 +1,4 @@
 tmp/frontend.sock
 tmp/backend.sock
+tmp/backend.log
+tmp/frontend.log
