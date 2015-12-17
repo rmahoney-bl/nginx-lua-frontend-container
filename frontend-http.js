@@ -1,7 +1,18 @@
 var http = require('http');
+var fs = require('fs');
+var socketName = './tmp/frontend.sock';
 
+// give this process a custom name
+process.title = 'nodeFeTest'
+
+// clear the socket file
+if (fs.existsSync(socketName)) {
+    fs.unlinkSync(socketName);
+}
+
+// handle http requess
 var handleRequest = function (req, res) {
-    console.log('client connected');
+    console.log(new Date().toISOString() + '    request received');
 
     // read raw input
     var rawInput = '';
@@ -17,5 +28,7 @@ var handleRequest = function (req, res) {
     });
 };
 
+// start server
 var server = http.createServer(handleRequest);
-server.listen('./frontend.sock');
+server.listen(socketName);
+console.log(new Date().toISOString() + '    server started');
