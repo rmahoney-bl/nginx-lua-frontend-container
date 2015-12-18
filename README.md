@@ -11,6 +11,10 @@ In this demonstration, Nodejs is used to create both the frontend and backend pr
 
 In a future iteration of this project, the frontend will be implemented with the React rendering engine python as a backend.
 
+# Diagram
+
+![Diagram](https://github.com/rmahoney-bl/nginx-lua-frontend-container/blob/master/docs/diagrams/nginx-lua.png)
+
 # Installation
 The installation process assumes you are running Ubuntu Linux.
 
